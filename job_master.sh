@@ -21,7 +21,6 @@ while [ "$test" -lt "$limit" ]; do
       echo $test of $limit processes finished
     else
       grep "$input" keys.txt || echo "$input" >> keys.txt 
-      #cat > keys.txt <<< "$input" \
     fi
 done
 
@@ -37,13 +36,6 @@ while [ "$test" -lt "$limit" ]; do
   echo "$input"
   let "test++"
 done
-#  echo start reduce number $i
-#done
-#
-#for ((i=0;i<reduceNum;i++)); do
-#  read rinput < reduce_pipe
-#  echo $rinput
-#done
-#
+
 end=$(date +%s)
 echo "execution time = $((end-start))"
